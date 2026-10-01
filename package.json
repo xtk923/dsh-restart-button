@@ -1,0 +1,41 @@
+{
+  "name": "dsh-restart-button",
+  "version": "0.2.0",
+  "description": "Restart DSH Desktop from inside it: the /restart command ends the desktop shell and brings DSH back — window included — instead of closing and reopening the app by hand",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtk923/dsh-restart-button.git"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "dsh-desktop",
+    "restart",
+    "command"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
